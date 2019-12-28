@@ -1,0 +1,84 @@
+body {
+    background-color: black;
+}
+
+body, html {
+    height: 100vh;
+}
+
+
+h1 {
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    color: white;
+    font-size: 60px;
+}
+
+.panel-page{
+    display: flex;
+    flex-direction: column;
+}
+
+.panel {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.search-text {
+    outline: none;
+    align-self: center;
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    background: black;
+    border: none;
+    margin: 12px;
+}
+
+.search-bar {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    border: 1px solid white;
+    border-radius: 40px;
+}
+
+.search-bar:hover {
+    transform: scale(1.1);
+}
+
+.search-btn {
+    align-self: center;
+    justify-self: center;
+    padding: 14px;
+    font-size: 20px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+
+.movie {
+    margin: 10px;
+    flex-grow: 1;
+}
+
+.movie:hover {
+    transform: translateY(-2px);
+}
+
+.detail-panel{
+    display: flex;
+    flex-direction: row;
+}
+
+.details{
+    font-size: 20px;
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+

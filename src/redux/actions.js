@@ -5,9 +5,9 @@ export function startLoadingMovies(base_url) {
     const final_url = base_url + config.api_key + extension_url;
     return (dispatch) => {
 
-        fetch(final_url)
+        return fetch(final_url)
             .then((res) => {
-                res.json()
+                return res.json()
                     .then((data) => {
                         const results = JSON.parse(JSON.stringify(data)).results;
                         dispatch(load_movies(results))
