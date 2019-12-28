@@ -7,15 +7,15 @@ import '../styles/stylesheet.css'
 class Main extends Component {
     constructor(props) {
         super(props);
-        this.base_url = 'https://api.themoviedb.org/3/discover/movie?api_key=';
         this.state = {
             loading: true
         };
     }
 
     componentDidMount() {
-        this.props.startLoadingMovies(this.base_url)
+        this.props.startLoadingMovies(this.props.page)
             .then(() => {
+                this.props.changePage();
                 this.setState({
                     loading:false
                 });
