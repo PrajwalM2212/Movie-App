@@ -13,28 +13,37 @@ class MovieDetails extends Component {
             const backdrop_path = `https://image.tmdb.org/t/p/original/${movie.backdrop_path}`
             console.log(movie);
             return (
-                <div className='detail-panel' 
-                style={{
-                    backgroundImage: `url(${backdrop_path})`,
-                    backgroundPosition: 'center',
-                    backgroundSize: 'cover',
-                    backgroundRepeat: 'no-repeat',
-                    width: '100%',
-                    height: '100vh',
-                }}>
+                <div className='detail-panel'
+                    style={{
+                        backgroundImage: `url(${backdrop_path})`,
+                        backgroundPosition: 'center',
+                        backgroundSize: 'cover',
+                        backgroundRepeat: 'no-repeat',
+                        width: '100%',
+                        height: '100vh',
+                        top: '0',
+                        left: '0'
+                    }}>
                     <div style={{
                         flex: '1'
                     }}>
                     </div>
                     <div className='details'>
-                        <div>
-                            <h2>{movie.title}</h2>
+                        <div className='movie-card'>
+                            <img src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`} />
+                            <div className='overview'>{movie.overview}</div>
+                            <div className='info'>
+                                <div id='avg'>
+                                    {movie.vote_average}
+                                </div>
+                                <div id='release'>
+                                    {movie.release_date}
+                                </div>
+                            </div>
                         </div>
-                        <div>overview: {movie.overview}</div>
-                        <div>vote_average: {movie.vote_average}</div>
-                        <div>release_date: {movie.release_date}</div>
                     </div >
-                </div >
+                </div>
+
             );
 
         }

@@ -20,6 +20,7 @@ class MoviePanel extends Component {
                     <div className='panel'>
                         {movies.map((movie, idx) => <Movie key={idx} movie={movies[idx]}/>)}
                     </div>
+                    <button className='btn-more'>Show More</button>
                 </div>
             </div>
         )
