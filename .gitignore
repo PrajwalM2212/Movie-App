@@ -25,4 +25,4 @@ yarn-error.log*
 /src/environment
 package-lock.json
 yarn.lock
-.idea/workspace.xml
+.idea
